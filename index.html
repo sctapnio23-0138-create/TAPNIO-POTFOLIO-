@@ -12,20 +12,22 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #ddd;
+            background: #0a0a0a;
         }
 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ff6b35;
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(255, 107, 53, 0.3);
+            border-bottom: 3px solid #ff6b35;
         }
 
         nav {
@@ -38,8 +40,10 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         nav ul {
@@ -49,50 +53,78 @@
         }
 
         nav a {
-            color: white;
+            color: #ff6b35;
             text-decoration: none;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9rem;
         }
 
         nav a:hover {
-            opacity: 0.8;
+            color: #fff;
+            text-shadow: 0 0 10px #ff6b35;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
             padding: 8rem 2rem;
             text-align: center;
+            border-bottom: 3px solid #ff6b35;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🏍";
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.05;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInDown 0.8s ease-out;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff6b35;
+            text-shadow: 0 0 20px #ff6b35;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out 0.2s both;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
+            background: #ff6b35;
+            color: #000;
+            padding: 1rem 2.5rem;
+            border-radius: 0;
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             animation: fadeInUp 0.8s ease-out 0.4s both;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #ff6b35;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff6b35;
+            background: transparent;
+            color: #ff6b35;
         }
 
         /* Main Container */
@@ -111,7 +143,10 @@
             font-size: 2.5rem;
             margin-bottom: 2rem;
             text-align: center;
-            color: #667eea;
+            color: #ff6b35;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #ff6b35;
         }
 
         /* About Section */
@@ -123,27 +158,61 @@
         }
 
         .about-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: #ff6b35;
+            text-transform: uppercase;
         }
 
         .about-content p {
             margin-bottom: 1rem;
-            color: #666;
+            color: #bbb;
             line-height: 1.8;
         }
 
         .about-image {
             width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
+            height: 400px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border: 4px solid #ff6b35;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #ff6b35;
+            font-size: 2rem;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23ff6b35" opacity="0.1" width="100" height="100"/></svg>');
+            pointer-events: none;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .photo-placeholder-text {
+            color: #ff6b35;
+            font-weight: bold;
             font-size: 1.2rem;
+            text-align: center;
         }
 
         /* Skills Section */
@@ -154,25 +223,30 @@
         }
 
         .skill-card {
-            background: #f8f9fa;
+            background: #1a1a1a;
             padding: 2rem;
-            border-radius: 10px;
+            border: 2px solid #ff6b35;
+            border-radius: 0;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 0 25px rgba(255, 107, 53, 0.5);
+            background: #2d2d2d;
         }
 
         .skill-card h3 {
-            color: #667eea;
+            color: #ff6b35;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 1.3rem;
         }
 
         .skill-card p {
-            color: #666;
+            color: #bbb;
         }
 
         /* Projects Section */
@@ -183,28 +257,31 @@
         }
 
         .project-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
+            background: #1a1a1a;
+            border: 2px solid #ff6b35;
+            border-radius: 0;
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+            background: #2d2d2d;
         }
 
         .project-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #ff6b35;
             font-size: 3rem;
+            border-bottom: 2px solid #ff6b35;
         }
 
         .project-info {
@@ -212,12 +289,13 @@
         }
 
         .project-info h3 {
-            color: #333;
+            color: #ff6b35;
             margin-bottom: 0.5rem;
+            text-transform: uppercase;
         }
 
         .project-info p {
-            color: #666;
+            color: #bbb;
             font-size: 0.95rem;
             margin-bottom: 1rem;
         }
@@ -229,11 +307,13 @@
         }
 
         .tag {
-            background: #667eea;
-            color: white;
+            background: #ff6b35;
+            color: #000;
             padding: 0.3rem 0.8rem;
-            border-radius: 20px;
+            border-radius: 0;
             font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         /* Contact Section */
@@ -253,10 +333,17 @@
         .contact-form input,
         .contact-form textarea {
             padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            border: 2px solid #ff6b35;
+            border-radius: 0;
             font-family: inherit;
             font-size: 1rem;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #666;
         }
 
         .contact-form textarea {
@@ -265,19 +352,23 @@
         }
 
         .contact-form button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
+            background: #ff6b35;
+            color: #000;
+            border: 2px solid #ff6b35;
             padding: 1rem;
-            border-radius: 5px;
+            border-radius: 0;
             font-size: 1rem;
             cursor: pointer;
             font-weight: bold;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .contact-form button:hover {
-            transform: scale(1.05);
+            background: transparent;
+            color: #ff6b35;
+            box-shadow: 0 0 20px #ff6b35;
         }
 
         /* Social Links */
@@ -294,25 +385,29 @@
             justify-content: center;
             width: 50px;
             height: 50px;
-            background: #f0f0f0;
-            border-radius: 50%;
+            background: transparent;
+            border: 2px solid #ff6b35;
+            border-radius: 0;
             text-decoration: none;
-            color: #667eea;
-            transition: background 0.3s, color 0.3s;
+            color: #ff6b35;
+            transition: all 0.3s;
+            font-weight: bold;
         }
 
         .social-link:hover {
-            background: #667eea;
-            color: white;
+            background: #ff6b35;
+            color: #000;
+            box-shadow: 0 0 15px #ff6b35;
         }
 
         /* Footer */
         footer {
-            background: #333;
-            color: white;
+            background: #000;
+            color: #ff6b35;
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
+            border-top: 3px solid #ff6b35;
         }
 
         /* Animations */
@@ -367,12 +462,12 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Portfolio</div>
+            <div class="logo">🏍 RIDER</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#projects">Builds</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -380,95 +475,100 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Full Stack Developer | Creative Designer | Problem Solver</p>
-        <a href="#projects" class="cta-button">View My Work</a>
+        <h1>FULL THROTTLE AHEAD</h1>
+        <p>Rider | Builder | Enthusiast</p>
+        <a href="#projects" class="cta-button">Rev It Up</a>
     </section>
 
     <!-- Main Content -->
     <div class="container">
         <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
+            <h2>About The Rider</h2>
             <div class="about">
                 <div class="about-content">
-                    <h3>Hi, I'm Your Name</h3>
+                    <h3>Throttle Master</h3>
                     <p>
-                        I'm a passionate developer with expertise in creating beautiful, functional web applications. 
-                        With a strong foundation in web technologies and a keen eye for design, I craft digital experiences 
-                        that users love.
+                        Passionate about the open road and the machines that take us there. 
+                        With years of experience in motorcycle culture, custom builds, and community, 
+                        I've built a reputation for knowing every inch of my rides.
                     </p>
                     <p>
-                        When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-                        or sharing knowledge with the community.
+                        When I'm not on the road, you'll find me tinkering in the garage, discussing rides with fellow enthusiasts, 
+                        or planning the next adventure. Life is better on two wheels.
                     </p>
                 </div>
-                <div class="about-image">📷 Your Photo Here</div>
+                <div class="about-image">
+                    <div class="photo-placeholder">
+                        <div>📸</div>
+                        <div class="photo-placeholder-text">Your Photo Here</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills">
-            <h2>My Skills</h2>
+            <h2>Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Web Development</h3>
-                    <p>HTML5, CSS3, JavaScript, React, Vue.js</p>
+                    <h3>🔧 Maintenance</h3>
+                    <p>Engine work, oil changes, tire management, brake systems</p>
                 </div>
                 <div class="skill-card">
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Python, Express, MongoDB, SQL</p>
+                    <h3>🎨 Customization</h3>
+                    <p>Custom builds, paint jobs, chrome work, performance upgrades</p>
                 </div>
                 <div class="skill-card">
-                    <h3>UI/UX Design</h3>
-                    <p>Figma, Adobe XD, Responsive Design, Prototyping</p>
+                    <h3>🛞 Mechanics</h3>
+                    <p>Transmission, suspension, electrical systems, tuning</p>
                 </div>
                 <div class="skill-card">
-                    <h3>Tools & Services</h3>
-                    <p>Git, GitHub, Docker, AWS, Firebase</p>
+                    <h3>🏁 Performance</h3>
+                    <p>Speed optimization, track experience, safety techniques, riding mastery</p>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>Featured Projects</h2>
+            <h2>Top Builds</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">🚀</div>
+                    <div class="project-image">🏍</div>
                     <div class="project-info">
-                        <h3>Project One</h3>
-                        <p>A modern web application built with React and Node.js, featuring real-time updates and seamless user experience.</p>
+                        <h3>Chopper Custom</h3>
+                        <p>Extended frame with classic chrome accents. Reworked engine with custom manifolds and high-performance carburetor for unmatched throttle response.</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag">Custom Frame</span>
+                            <span class="tag">Chrome Work</span>
+                            <span class="tag">Engine Tuning</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">💼</div>
+                    <div class="project-image">⚡</div>
                     <div class="project-info">
-                        <h3>Project Two</h3>
-                        <p>E-commerce platform with payment integration, inventory management, and advanced search capabilities.</p>
+                        <h3>Street Racer</h3>
+                        <p>High-performance street bike with aggressive stance. Fully upgraded suspension system and racing-grade tires for superior handling and speed.</p>
                         <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Turbo</span>
+                            <span class="tag">Suspension</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">📱</div>
+                    <div class="project-image">🌄</div>
                     <div class="project-info">
-                        <h3>Project Three</h3>
-                        <p>Mobile-first dashboard application providing analytics and insights with interactive visualizations.</p>
+                        <h3>Adventure Cruiser</h3>
+                        <p>Long-haul beast built for every terrain. Enhanced fuel capacity, GPS integration, and comfort upgrades for epic cross-country journeys.</p>
                         <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">D3.js</span>
+                            <span class="tag">Long Distance</span>
+                            <span class="tag">Tech Stack</span>
+                            <span class="tag">Comfort Build</span>
                         </div>
                     </div>
                 </div>
@@ -477,20 +577,20 @@
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Get In Touch</h2>
+            <h2>Gear Up</h2>
             <div class="contact-content">
-                <p>I'd love to hear from you! Whether you have a question or a project opportunity, feel free to reach out.</p>
+                <p>Let's talk about motorcycles, builds, or your next adventure. Drop me a line!</p>
                 
                 <form class="contact-form" onsubmit="handleSubmit(event)">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
+                    <textarea placeholder="Message about your ride or project..." required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
 
                 <div class="social-links">
-                    <a href="#" class="social-link" title="LinkedIn">in</a>
-                    <a href="#" class="social-link" title="GitHub">gh</a>
+                    <a href="#" class="social-link" title="Instagram">IG</a>
+                    <a href="#" class="social-link" title="YouTube">YT</a>
                     <a href="#" class="social-link" title="Twitter">𝕏</a>
                     <a href="#" class="social-link" title="Email">✉</a>
                 </div>
@@ -500,14 +600,14 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Throttle & Roll. Life is a highway. | All rights reserved.</p>
     </footer>
 
     <script>
         // Handle form submission
         function handleSubmit(event) {
             event.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
+            alert('Message received! Rev up that engine and I\'ll get back to you soon.');
             event.target.reset();
         }
 
