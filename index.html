@@ -14,20 +14,20 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #ddd;
-            background: #0a0a0a;
+            color: #e0e0e0;
+            background: #000000;
         }
 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: #ff6b35;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #00FF00;
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 15px rgba(255, 107, 53, 0.3);
-            border-bottom: 3px solid #ff6b35;
+            box-shadow: 0 2px 15px rgba(0, 255, 0, 0.3);
+            border-bottom: 3px solid #00FF00;
         }
 
         nav {
@@ -53,7 +53,7 @@
         }
 
         nav a {
-            color: #ff6b35;
+            color: #00FF00;
             text-decoration: none;
             transition: all 0.3s;
             text-transform: uppercase;
@@ -63,16 +63,16 @@
 
         nav a:hover {
             color: #fff;
-            text-shadow: 0 0 10px #ff6b35;
+            text-shadow: 0 0 10px #00FF00;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             color: #fff;
             padding: 8rem 2rem;
             text-align: center;
-            border-bottom: 3px solid #ff6b35;
+            border-bottom: 3px solid #00FF00;
             position: relative;
             overflow: hidden;
         }
@@ -93,8 +93,8 @@
             animation: fadeInDown 0.8s ease-out;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #ff6b35;
-            text-shadow: 0 0 20px #ff6b35;
+            color: #00FF00;
+            text-shadow: 0 0 20px #00FF00;
         }
 
         .hero p {
@@ -107,7 +107,7 @@
 
         .cta-button {
             display: inline-block;
-            background: #ff6b35;
+            background: #00FF00;
             color: #000;
             padding: 1rem 2.5rem;
             border-radius: 0;
@@ -117,14 +117,14 @@
             animation: fadeInUp 0.8s ease-out 0.4s both;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border: 2px solid #ff6b35;
+            border: 2px solid #00FF00;
         }
 
         .cta-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px #ff6b35;
+            box-shadow: 0 0 20px #00FF00;
             background: transparent;
-            color: #ff6b35;
+            color: #00FF00;
         }
 
         /* Main Container */
@@ -143,10 +143,10 @@
             font-size: 2.5rem;
             margin-bottom: 2rem;
             text-align: center;
-            color: #ff6b35;
+            color: #00FF00;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px #ff6b35;
+            text-shadow: 0 0 10px #00FF00;
         }
 
         /* About Section */
@@ -160,7 +160,7 @@
         .about-content h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: #ff6b35;
+            color: #00FF00;
             text-transform: uppercase;
         }
 
@@ -173,14 +173,14 @@
         .about-image {
             width: 100%;
             height: 400px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            border: 4px solid #ff6b35;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border: 4px solid #00FF00;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ff6b35;
+            color: #00FF00;
             font-size: 2rem;
-            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -190,14 +190,14 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23ff6b35" opacity="0.1" width="100" height="100"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%2300FF00" opacity="0.05" width="100" height="100"/></svg>');
             pointer-events: none;
         }
 
         .photo-placeholder {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -206,13 +206,14 @@
             gap: 1rem;
             position: relative;
             z-index: 1;
+            overflow: hidden;
         }
 
-        .photo-placeholder-text {
-            color: #ff6b35;
-            font-weight: bold;
-            font-size: 1.2rem;
-            text-align: center;
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
         }
 
         /* Skills Section */
@@ -223,23 +224,23 @@
         }
 
         .skill-card {
-            background: #1a1a1a;
+            background: #0a0a0a;
             padding: 2rem;
-            border: 2px solid #ff6b35;
+            border: 2px solid #00FF00;
             border-radius: 0;
             text-align: center;
             transition: all 0.3s;
-            box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(255, 107, 53, 0.5);
-            background: #2d2d2d;
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
+            background: #1a1a1a;
         }
 
         .skill-card h3 {
-            color: #ff6b35;
+            color: #00FF00;
             margin-bottom: 1rem;
             text-transform: uppercase;
             font-size: 1.3rem;
@@ -257,31 +258,31 @@
         }
 
         .project-card {
-            background: #1a1a1a;
-            border: 2px solid #ff6b35;
+            background: #0a0a0a;
+            border: 2px solid #00FF00;
             border-radius: 0;
             overflow: hidden;
             transition: all 0.3s;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
-            background: #2d2d2d;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+            background: #1a1a1a;
         }
 
         .project-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ff6b35;
+            color: #00FF00;
             font-size: 3rem;
-            border-bottom: 2px solid #ff6b35;
+            border-bottom: 2px solid #00FF00;
         }
 
         .project-info {
@@ -289,7 +290,7 @@
         }
 
         .project-info h3 {
-            color: #ff6b35;
+            color: #00FF00;
             margin-bottom: 0.5rem;
             text-transform: uppercase;
         }
@@ -307,7 +308,7 @@
         }
 
         .tag {
-            background: #ff6b35;
+            background: #00FF00;
             color: #000;
             padding: 0.3rem 0.8rem;
             border-radius: 0;
@@ -333,11 +334,11 @@
         .contact-form input,
         .contact-form textarea {
             padding: 1rem;
-            border: 2px solid #ff6b35;
+            border: 2px solid #00FF00;
             border-radius: 0;
             font-family: inherit;
             font-size: 1rem;
-            background: #1a1a1a;
+            background: #0a0a0a;
             color: #fff;
         }
 
@@ -352,9 +353,9 @@
         }
 
         .contact-form button {
-            background: #ff6b35;
+            background: #00FF00;
             color: #000;
-            border: 2px solid #ff6b35;
+            border: 2px solid #00FF00;
             padding: 1rem;
             border-radius: 0;
             font-size: 1rem;
@@ -367,8 +368,8 @@
 
         .contact-form button:hover {
             background: transparent;
-            color: #ff6b35;
-            box-shadow: 0 0 20px #ff6b35;
+            color: #00FF00;
+            box-shadow: 0 0 20px #00FF00;
         }
 
         /* Social Links */
@@ -386,28 +387,28 @@
             width: 50px;
             height: 50px;
             background: transparent;
-            border: 2px solid #ff6b35;
+            border: 2px solid #00FF00;
             border-radius: 0;
             text-decoration: none;
-            color: #ff6b35;
+            color: #00FF00;
             transition: all 0.3s;
             font-weight: bold;
         }
 
         .social-link:hover {
-            background: #ff6b35;
+            background: #00FF00;
             color: #000;
-            box-shadow: 0 0 15px #ff6b35;
+            box-shadow: 0 0 15px #00FF00;
         }
 
         /* Footer */
         footer {
             background: #000;
-            color: #ff6b35;
+            color: #00FF00;
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
-            border-top: 3px solid #ff6b35;
+            border-top: 3px solid #00FF00;
         }
 
         /* Animations */
@@ -433,8 +434,121 @@
             }
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeInMode 0.3s ease-out;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #0a0a0a;
+            border: 3px solid #00FF00;
+            border-radius: 0;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #00FF00;
+            background: none;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 10px #00FF00;
+        }
+
+        .modal-header {
+            color: #00FF00;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #00FF00;
+            padding-bottom: 1rem;
+        }
+
+        .modal-header h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .modal-body {
+            color: #ddd;
+            line-height: 1.8;
+        }
+
+        .modal-body p {
+            margin-bottom: 1rem;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: 2px solid #00FF00;
+            margin: 1.5rem 0;
+            background: #000;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            background: #00FF00;
+            color: #000;
+            border: 2px solid #00FF00;
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 0;
+        }
+
+        .download-btn:hover {
+            background: transparent;
+            color: #00FF00;
+            box-shadow: 0 0 15px #00FF00;
+        }
+
+        @keyframes fadeInMode {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
             nav ul {
                 gap: 1rem;
                 font-size: 0.9rem;
@@ -455,53 +569,49 @@
             section h2 {
                 font-size: 1.8rem;
             }
-        }
+        
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">🏍 RIDER</div>
+            <div class="logo">⚡ DEV</div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Expertise</a></li>
-                <li><a href="#projects">Builds</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>FULL THROTTLE AHEAD</h1>
-        <p>Rider | Builder | Enthusiast</p>
-        <a href="#projects" class="cta-button">Rev It Up</a>
+        <h1>TURBO CHARGED</h1>
+        <p>Developer | Problem Solver | Code Architect</p>
+        <a href="#projects" class="cta-button">Launch</a>
     </section>
 
     <!-- Main Content -->
     <div class="container">
         <!-- About Section -->
         <section id="about">
-            <h2>About The Rider</h2>
+            <h2>About</h2>
             <div class="about">
                 <div class="about-content">
-                    <h3>Throttle Master</h3>
+                    <h3>Full-Stack Developer</h3>
                     <p>
-                        Passionate about the open road and the machines that take us there. 
-                        With years of experience in motorcycle culture, custom builds, and community, 
-                        I've built a reputation for knowing every inch of my rides.
+                        Building fast, scalable, and elegant solutions with modern technologies. 
+                        Passionate about clean code and solving complex problems.
                     </p>
                     <p>
-                        When I'm not on the road, you'll find me tinkering in the garage, discussing rides with fellow enthusiasts, 
-                        or planning the next adventure. Life is better on two wheels.
+                        Specialized in web development, data analysis, and creating high-performance applications.
                     </p>
                 </div>
                 <div class="about-image">
                     <div class="photo-placeholder">
-                        <div>📸</div>
-                        <div class="photo-placeholder-text">Your Photo Here</div>
+                        <img src="me.jpg" alt="Profile Photo" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -510,97 +620,92 @@
         <!-- Skills Section -->
         <section id="skills">
             <h2>Expertise</h2>
-            <div class="skills-grid">
+            <divSkillskills-grid">
                 <div class="skill-card">
-                    <h3>🔧 Maintenance</h3>
-                    <p>Engine work, oil changes, tire management, brake systems</p>
+                    <h3>⚡ Web Development</h3>
+                    <p>HTML5, CSS3, JavaScript, React, Vue.js</p>
                 </div>
                 <div class="skill-card">
-                    <h3>🎨 Customization</h3>
-                    <p>Custom builds, paint jobs, chrome work, performance upgrades</p>
+                    <h3>🔧 Backend Development</h3>
+                    <p>Node.js, Python, Express, Databases</p>
                 </div>
                 <div class="skill-card">
-                    <h3>🛞 Mechanics</h3>
-                    <p>Transmission, suspension, electrical systems, tuning</p>
+                    <h3>🎨 UI/UX Design</h3>
+                    <p>Responsive Design, Figma, Prototyping</p>
                 </div>
                 <div class="skill-card">
-                    <h3>🏁 Performance</h3>
-                    <p>Speed optimization, track experience, safety techniques, riding mastery</p>
+                    <h3>⚙️ Tools & DevOps</h3>
+                    <p>Git, GitHub, Docker, Cloud Services</p>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>Top Builds</h2>
+            <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🏍</div>
+                <div class="project-card" onclick="openModal('midtermModal')">
+                    <div class="project-image">📊</div>
                     <div class="project-info">
-                        <h3>Chopper Custom</h3>
-                        <p>Extended frame with classic chrome accents. Reworked engine with custom manifolds and high-performance carburetor for unmatched throttle response.</p>
+                        <h3>Midterm Lab 1: Data Cleaning and Modeling</h3>
+                        <p>Click to view project details, description, and download files (PDF & Excel)</p>
                         <div class="project-tags">
-                            <span class="tag">Custom Frame</span>
-                            <span class="tag">Chrome Work</span>
-                            <span class="tag">Engine Tuning</span>
+                            <span class="tag">Click to View</span>
+                            <span class="tag">PDF</span>
+                            <span class="tag">Excel</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">⚡</div>
-                    <div class="project-info">
-                        <h3>Street Racer</h3>
-                        <p>High-performance street bike with aggressive stance. Fully upgraded suspension system and racing-grade tires for superior handling and speed.</p>
-                        <div class="project-tags">
-                            <span class="tag">Performance</span>
-                            <span class="tag">Turbo</span>
-                            <span class="tag">Suspension</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">🌄</div>
-                    <div class="project-info">
-                        <h3>Adventure Cruiser</h3>
-                        <p>Long-haul beast built for every terrain. Enhanced fuel capacity, GPS integration, and comfort upgrades for epic cross-country journeys.</p>
-                        <div class="project-tags">
-                            <span class="tag">Long Distance</span>
-                            <span class="tag">Tech Stack</span>
-                            <span class="tag">Comfort Build</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Gear Up</h2>
-            <div class="contact-content">
-                <p>Let's talk about motorcycles, builds, or your next adventure. Drop me a line!</p>
-                
-                <form class="contact-form" onsubmit="handleSubmit(event)">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Message about your ride or project..." required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-
-                <div class="social-links">
-                    <a href="#" class="social-link" title="Instagram">IG</a>
-                    <a href="#" class="social-link" title="YouTube">YT</a>
-                    <a href="#" class="social-link" title="Twitter">𝕏</a>
-                    <a href="#" class="social-link" title="Email">✉</a>
                 </div>
             </div>
         </section>
     </div>
 
+    <!-- Midterm Lab Modal -->
+    <div id="midtermModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('midtermModal')">&times;</button>
+            <div class="modal-header">
+                <h2>Midterm Lab 1: Task Data Cleaning and Modeling</h2>
+            </div>
+            <div class="modal-body">
+                <p>
+                    This comprehensive midterm lab project focuses on data cleaning and statistical modeling techniques. 
+                    The project demonstrates practical applications of data preprocessing, exploratory data analysis, and 
+                    predictive modeling.
+                </p>
+                <p>
+                    <strong>Key Objectives:</strong><br>
+                    • Data collection and preprocessing<br>
+                    • Handling missing values and outliers<br>
+                    • Exploratory Data Analysis (EDA)<br>
+                    • Statistical modeling and validation<br>
+                    • Results interpretation and visualization
+                </p>
+                <p>
+                    The project includes detailed analysis with visualizations, statistical tests, and model performance metrics.
+                    Both the PDF report and Excel data file are available for download below.
+                </p>
+
+                <!-- PDF Viewer -->
+                <h3 style="color: #00FF00; margin-top: 1.5rem;">📄 PDF Preview:</h3>
+                <embed src="midterm 1.pdf" type="application/pdf" class="pdf-viewer">
+
+                <!-- Download Buttons -->
+                <div class="download-buttons">
+                    <a href="midterm 1.pdf" download="Midterm Lab 1 - Data Cleaning and Modeling.pdf" class="download-btn">
+                        📥 Download PDF
+                    </a>
+                    <a href="midterm_data.xlsx" download="Midterm Lab 1 - Data.xlsx" class="download-btn">
+                        📊 Download Excel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Throttle & Roll. Life is a highway. | All rights reserved.</p>
+        <p>&copy; 2024 Full-Stack Developer. All rights reserved.</p>
     </footer>
 
     <script>
@@ -609,6 +714,28 @@
             event.preventDefault();
             alert('Message received! Rev up that engine and I\'ll get back to you soon.');
             event.target.reset();
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('show');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('show');
+            }
+        }
+
+        // Close modal when clicking outside the content
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
         }
 
         // Smooth scrolling for navigation links
